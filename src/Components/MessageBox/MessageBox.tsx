@@ -17,7 +17,7 @@ export const MessageBox: React.FC = () => {
     setMessage({
       id: '123gha12',
       text: value,
-      last_updated: Date.now().toString()
+      last_updated: new Date(Date.now()).toISOString()
     });
   }
   const handleClick = () => {

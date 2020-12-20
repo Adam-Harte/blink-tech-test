@@ -1,0 +1,15 @@
+.chat {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.chat__messages {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 90vh;
+	padding: 10px;
+	margin: 0;
+	margin-left: 20px;
+}

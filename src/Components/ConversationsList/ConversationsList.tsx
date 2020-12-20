@@ -11,7 +11,16 @@ export const ConversationsList: React.FC = () => {
 
   return (
     <ul className="conversations-list__list">
-      {conversations.map((conversation) => (
+      {conversations.sort((a, b) => {
+        const dateA = new Date(a.last_updated);
+        const utcA = Date.UTC(dateA.getUTCFullYear(), dateA.getUTCMonth(), dateA.getUTCDate(),
+        dateA.getUTCHours(), dateA.getUTCMinutes(), dateA.getUTCSeconds());
+        const dateB = new Date(b.last_updated);
+        const utcB = Date.UTC(dateB.getUTCFullYear(), dateB.getUTCMonth(), dateB.getUTCDate(),
+        dateB.getUTCHours(), dateB.getUTCMinutes(), dateB.getUTCSeconds());
+
+        return utcB - utcA;
+      }).map((conversation) => (
         <li className="conversations-list__list__item" key={conversation.id}>
           <Conversation conversation={conversation} />
         </li>

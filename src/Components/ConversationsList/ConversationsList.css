@@ -1,0 +1,9 @@
+.conversations-list__list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.conversations-list__list__item {
+	margin: 10px;
+}

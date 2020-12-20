@@ -1,0 +1,10 @@
+.conversation__button {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}

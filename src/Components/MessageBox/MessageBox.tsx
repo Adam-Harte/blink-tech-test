@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import uniqid from 'uniqid';
 
 import { ConversationsContext } from '../../Context/ConversationsContext';
 
@@ -15,7 +16,7 @@ export const MessageBox: React.FC = () => {
     const { value } = e.currentTarget;
 
     setMessage({
-      id: '123gha12',
+      id: uniqid(),
       text: value,
       last_updated: new Date(Date.now()).toISOString()
     });
@@ -27,6 +28,12 @@ export const MessageBox: React.FC = () => {
         message: {
           ...message,
         }
+      });
+
+      setMessage({
+        id: '',
+        text: '',
+        last_updated: ''
       });
     }
   }

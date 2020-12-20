@@ -7,7 +7,6 @@ import './ConversationsList.css';
 
 export const ConversationsList: React.FC = () => {
   const { conversations } = useContext(ConversationsContext);
-  console.log(conversations);
 
   return (
     <ul className="conversations-list__list">

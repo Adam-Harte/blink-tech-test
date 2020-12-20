@@ -2,6 +2,7 @@
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+	border-right: 1px solid grey;
 }
 
 .conversations-list__list__item {

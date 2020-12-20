@@ -38,7 +38,7 @@ export const MessageBox: React.FC = () => {
     }
   }
 
-  return (
+  return selectedConversation ? (
     <div className="message-box">
       <textarea
         className="message-box__text"
@@ -56,6 +56,6 @@ export const MessageBox: React.FC = () => {
         Send
       </button>
     </div>
-  );
+  ) : null;
 };
 
